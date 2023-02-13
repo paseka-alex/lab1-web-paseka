@@ -3,8 +3,9 @@ async function fetch_info(url) {
   let data = await response.json();
   console.log(data);
   document.getElementById("result").innerHTML = data["count"];
-  document.getElementById("asjson").innerHTML = JSON.stringify(data);
+  document.getElementById("asjson").innerHTML = JSON.stringify(data, null, 2);
 }
+
 
 document.getElementById("button").addEventListener("click", function () {
   let input = document.getElementById("keyword");
